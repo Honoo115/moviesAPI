@@ -31,6 +31,7 @@ testAuthAtRoot = (req, res) => {
 //Middleware
 
 app.use(helmet());
+app.use(validateBearerToken);
 app.use(morgan("dev"));
 app.use(cors());
 
