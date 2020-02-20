@@ -10,6 +10,18 @@ const app = express();
 validateBearerToken = (req, res, next) => {
   debugger;
   const authToken = req.get("Authorization");
+ // This is how it would function normally
+  // const authToken = req.get('Authorization');
+  // const apiToken = process.env.API_TOKEN;
+  ​
+  /* 
+  To not expose my real secret .env key, I've create a dummy key to utilize for
+    authentication for the grading team.
+    
+    Please add the header: 
+      Authorization: Bearer ba588992-5369-11ea-8d77-2e728ce88125 
+    for access 
+  */
 
   // const apiToken = process.env.API_TOKEN;
   const apiToken =  "fake"
